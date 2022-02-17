@@ -1,95 +1,91 @@
 @extends('template.homestyle')
 @section('home')
+ <!-- BAGIAN HEADER -->
+<header id="header" class="fixed-top ">
+  <div class="container d-flex align-items-center justify-content-lg-between">
 
-<div id="topbar" class="d-flex align-items-center fixed-top">
-  <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
-    <div class="align-items-center d-none d-md-flex">
-      <i class="bi bi-clock"></i> Monday - Saturday, 8AM to 04PM
-    </div>
-    <div class="d-flex align-items-center">
-      <i class="bi bi-phone"></i> Call us now 08971515579
-    </div>
-  </div>
-</div>
-<!-- ======= Header ======= -->
-<header id="header" class="fixed-top">
-  <div class="container d-flex align-items-center">
-
-    <a href="index.html" class="logo me-auto"><img src="{{asset('assets/img/logo.png')}}" alt=""></a>
+    <h1 class="logo me-auto me-lg-0"><a href="#">SMK <span>TELKOM</span></a></h1>
     <!-- Uncomment below if you prefer to use an image logo -->
-    <!-- <h1 class="logo me-auto"><a href="index.html">Medicio</a></h1> -->
+    <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
     <nav id="navbar" class="navbar order-last order-lg-0">
       <ul>
-        <li><a class="nav-link scrollto " href="#hero">Home</a></li>
-        <li><a class="nav-link scrollto" href="#about">About</a></li>
-      </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
+        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+        <li><a class="nav-link scrollto" href="#counts">About</a></li>
+
     </nav><!-- .navbar -->
 
-    <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Absen</span> Siswa</a>
+    <a href="#about" class="get-started-btn scrollto">ABSEN</a>
 
   </div>
 </header><!-- End Header -->
 
 <!-- ======= Hero Section ======= -->
-<section id="hero">
-  <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+<section id="hero" class="d-flex align-items-center justify-content-center">
+  <div class="container" data-aos="fade-up">
 
-    <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
-
-    <div class="carousel-inner" role="listbox">
-
-      <!-- Slide 1 -->
-      <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg)">
-        <div class="container">
-          <h2>Welcome SMK TELKOM <span>Medicio</span></h2>
-          <p>SMK Telkom merupakan</p>
-          <a href="#about" class="btn-get-started scrollto">Read More</a>
-        </div>
+    <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+      <div class="col-xl-6 col-lg-8">
+        <h1>Powerful Digital Solutions With Gp<span>.</span></h1>
+        <h2>We are team of talented digital marketers</h2>
       </div>
-
-     
     </div>
-
-    
-
-   
 
   </div>
 </section><!-- End Hero -->
 
-<section id="about" class="about">
-  <div class="container" data-aos="fade-up">
+   <!-- ======= Counts Section ======= -->
+   <section id="counts" class="counts">
+    <div class="container" data-aos="fade-up">
 
-    <div class="section-title">
-      <h2>About Us</h2>
-      <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-    </div>
+      <div class="row no-gutters">
+        <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start" data-aos="fade-right" data-aos-delay="100"></div>
+        <div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch" data-aos="fade-left" data-aos-delay="100">
+          <div class="content d-flex flex-column justify-content-center">
+            <h3>Visi & Misi SMK TELKOM Makassar</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+            </p>
+            <div class="row">
+              <div class="col-md-6 d-md-flex align-items-md-stretch">
+                <div class="count-box">
+                  <i class="bi bi-emoji-smile"></i>
+                  <span data-purecounter-start="0" data-purecounter-end="65" data-purecounter-duration="2" class="purecounter"></span>
+                  <p><strong>Happy Clients</strong> consequuntur voluptas nostrum aliquid ipsam architecto ut.</p>
+                </div>
+              </div>
 
-    <div class="row">
-      <div class="col-lg-6" data-aos="fade-right">
-        <img src="assets/img/about.jpg" class="img-fluid" alt="">
+              <div class="col-md-6 d-md-flex align-items-md-stretch">
+                <div class="count-box">
+                  <i class="bi bi-journal-richtext"></i>
+                  <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="2" class="purecounter"></span>
+                  <p><strong>Projects</strong> adipisci atque cum quia aspernatur totam laudantium et quia dere tan</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 d-md-flex align-items-md-stretch">
+                <div class="count-box">
+                  <i class="bi bi-clock"></i>
+                  <span data-purecounter-start="0" data-purecounter-end="35" data-purecounter-duration="4" class="purecounter"></span>
+                  <p><strong>Years of experience</strong> aut commodi quaerat modi aliquam nam ducimus aut voluptate non vel</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 d-md-flex align-items-md-stretch">
+                <div class="count-box">
+                  <i class="bi bi-award"></i>
+                  <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="4" class="purecounter"></span>
+                  <p><strong>Awards</strong> rerum asperiores dolor alias quo reprehenderit eum et nemo pad der</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- End .content-->
+        </div>
       </div>
-      <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
-        <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-        <p class="fst-italic">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua.
-        </p>
-        <ul>
-          <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-          <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-          <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-        </ul>
-        <p>
-          Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum
-        </p>
-      </div>
-    </div>
 
-  </div>
-</section><!-- End About Us Section -->
+    </div>
+  </section><!-- End Counts Section -->
+
+<main id="main">
+
 @endsection
