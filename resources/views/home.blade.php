@@ -1,131 +1,95 @@
 @extends('template.homestyle')
 @section('home')
-<header id="header">
-  <div class="container d-flex align-items-center justify-content-between">
 
-    <div class="logo">
-      <h1><a href="index.html">Bocor<span>.</span></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+<div id="topbar" class="d-flex align-items-center fixed-top">
+  <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
+    <div class="align-items-center d-none d-md-flex">
+      <i class="bi bi-clock"></i> Monday - Saturday, 8AM to 04PM
     </div>
+    <div class="d-flex align-items-center">
+      <i class="bi bi-phone"></i> Call us now 08971515579
+    </div>
+  </div>
+</div>
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+  <div class="container d-flex align-items-center">
 
-    <nav id="navbar" class="navbar">
+    <a href="index.html" class="logo me-auto"><img src="{{asset('assets/img/logo.png')}}" alt=""></a>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <h1 class="logo me-auto"><a href="index.html">Medicio</a></h1> -->
+
+    <nav id="navbar" class="navbar order-last order-lg-0">
       <ul>
-        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-        <li><a class="getstarted scrollto" href="#about">Absen</a></li>
+        <li><a class="nav-link scrollto " href="#hero">Home</a></li>
+        <li><a class="nav-link scrollto" href="#about">About</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav><!-- .navbar -->   
+    </nav><!-- .navbar -->
+
+    <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Absen</span> Siswa</a>
 
   </div>
-</header>
+</header><!-- End Header -->
 
+<!-- ======= Hero Section ======= -->
 <section id="hero">
+  <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
-  <div class="container">
-    <div class="row d-flex align-items-center">
-    <div class=" col-lg-6 py-5 py-lg-0 order-2 order-lg-1" data-aos="fade-right">
-      <h1>Your new digital experience with Bocor</h1>
-      <h2>We are team of talented designers making websites with Bootstrap</h2>
-      <a href="#about" class="btn-get-started scrollto">Get Started</a>
-    </div>
-    <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
-      <img src="{{asset('assets/img/hero-img.png')}}"class="img-fluid" alt="">
-    </div>
-  </div>
-  </div>
+    <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
-</section>
-<!--bagian ats-->
+    <div class="carousel-inner" role="listbox">
 
-<main id="main">
-
-  <!-- ======= Clients Section ======= -->
-  <section id="clients" class="clients section-bg">
-    <div class="container">
-
-      <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
-
-        <div class="col-lg-2 col-md-4 col-6">
-          <div class="client-logo">
-            <img src="{{asset('assets/img/clients/client-1.png')}}" class="img-fluid" alt="" data-aos="flip-right">
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-4 col-6">
-          <div class="client-logo">
-            <img src="{{asset('assets/img/clients/client-2.png')}}"class="img-fluid" alt="" data-aos="flip-right" data-aos-delay="100">
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-4 col-6">
-          <div class="client-logo">
-            <img src="{{asset('assets/img/clients/client-3.png')}}" class="img-fluid" alt="" data-aos="flip-right" data-aos-delay="200">
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-4 col-6">
-          <div class="client-logo">
-            <img src="{{asset('assets/img/clients/client-4.png')}}" class="img-fluid" alt="" data-aos="flip-right" data-aos-delay="300">
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-4 col-6">
-          <div class="client-logo">
-            <img src="{{asset('assets/img/clients/client-5.png')}}" class="img-fluid" alt="" data-aos="flip-right" data-aos-delay="400">
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-4 col-6">
-          <div class="client-logo">
-            <img src="{{asset('assets/img/clients/client-6.png')}}" class="img-fluid" alt="" data-aos="flip-right" data-aos-delay="500">
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section><!-- End Clients Section -->
-
-  <!-- ======= About Section ======= -->
-  <section id="about" class="about section-bg">
-    <div class="container">
-
-      <div class="row gy-4">
-        <div class="image col-xl-5"></div>
-        <div class="col-xl-7">
-          <div class="content d-flex flex-column justify-content-center ps-0 ps-xl-4">
-            <h3 data-aos="fade-in" data-aos-delay="100">Voluptatem dignissimos provident quasi</h3>
-            <p data-aos="fade-in">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-            </p>
-            <div class="row gy-4 mt-3">
-              <div class="col-md-6 icon-box" data-aos="fade-up">
-                <i class="bx bx-receipt"></i>
-                <h4><a href="#">Corporis voluptates sit</a></h4>
-                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-              </div>
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <i class="bx bx-cube-alt"></i>
-                <h4><a href="#">Ullamco laboris nisi</a></h4>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-              </div>
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                <i class="bx bx-images"></i>
-                <h4><a href="#">Labore consequatur</a></h4>
-                <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-              </div>
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                <i class="bx bx-shield"></i>
-                <h4><a href="#">Beatae veritatis</a></h4>
-                <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
-              </div>
-            </div>
-          </div><!-- End .content-->
+      <!-- Slide 1 -->
+      <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg)">
+        <div class="container">
+          <h2>Welcome SMK TELKOM <span>Medicio</span></h2>
+          <p>SMK Telkom merupakan</p>
+          <a href="#about" class="btn-get-started scrollto">Read More</a>
         </div>
       </div>
 
+     
     </div>
-  </section>
 
+    
+
+   
+
+  </div>
+</section><!-- End Hero -->
+
+<section id="about" class="about">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>About Us</h2>
+      <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6" data-aos="fade-right">
+        <img src="assets/img/about.jpg" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
+        <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+        <p class="fst-italic">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </p>
+        <ul>
+          <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+          <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+          <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+        </ul>
+        <p>
+          Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End About Us Section -->
 @endsection
